@@ -1,15 +1,16 @@
 package com.dishes.model;
-import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Dishes")
 public class Dishes {
 	@Id
-	Long dishId;
-	String dishname;
-	int price;
-	String desctiption;
-	Long id;
+	private Long dishId;
+	private String dishname;
+	private int price;
+	private String desctiption;
+	private Long id;
 	
 	public Long getDishId() {
 		return dishId;
